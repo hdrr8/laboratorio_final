@@ -25,7 +25,7 @@ def open_mqtt_network(
     '''
     Abrir conexion de red con el broker MQTT
     '''
-    send_cmd('AT+QMTOPEN=0',"54.191.221.11",1883),
+    send_cmd('AT+QMTOPEN=0','54.191.221.11',1883),
 
 def connect_to_mqtt_server(
     ser, 
@@ -35,7 +35,7 @@ def connect_to_mqtt_server(
     print_response=DEFALUT_PRINT_RESPONSE,
     ):
     
-    send_cmd('AT+QMTCONN=0',"54.191.221.11",1883),
+    send_cmd('AT+QMTCONN=0','54.191.221.11',1883),
 
 def publish_mqtt_message(
     ser, 
@@ -48,12 +48,13 @@ def publish_mqtt_message(
     print_response=DEFALUT_PRINT_RESPONSE
     ):
     
-    send_cmd('AT+QMTPUB=0',"54.191.221.11",1883),
+    send_cmd('AT+QMTPUB=0','Mensaje',1883),
 
 def close_mqtt_network(ser, tcp_connect_id=DEFAULT_TCP_CONNECT_ID, print_response=DEFALUT_PRINT_RESPONSE):
-    send_cmd('AT+QMTCLOSE=0',"54.191.221.11",1883)
-
+    
+    send_cmd('AT+QMTCLOSE=0','54.191.221.11',1883)
 
 def disconnect_to_mqtt_server(ser,  print_response=DEFALUT_PRINT_RESPONSE):
-    send_cmd('AT+QMTDISC=0',"54.191.221.11",1883)
+    
+    send_cmd('AT+QMTDISC=0','54.191.221.11',1883)
     
