@@ -6,7 +6,6 @@ from NBIOT.send_cmd import send_cmd
 from serial import Serial
 
 
-
 NBIOT_port = Serial(port='COM9', baudrate=115200, bytesize=8, parity='N', stopbits=1, timeout=5)
 
 cmd_response = send_cmd("AT", NBIOT_port,  print_response=True, ms_of_delay_after=100)
