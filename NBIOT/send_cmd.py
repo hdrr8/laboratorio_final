@@ -1,4 +1,5 @@
-import serial
+from serial import Serial
+
 import serial.tools.list_ports
 
 from time import sleep
